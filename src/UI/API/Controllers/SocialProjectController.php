@@ -5,16 +5,17 @@ declare(strict_types=1);
 namespace AdminKit\SocialProjects\UI\API\Controllers;
 
 use AdminKit\SocialProjects\Models\SocialProject;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use AdminKit\SocialProjects\UI\API\Resources\SocialProjectResource;
 
 class SocialProjectController extends Controller
 {
-    public function index()
+    public function index(): AnonymousResourceCollection
     {
-        return SocialProject::all();
-    }
+        $socialProjects = SocialProject::query()
+            ->orderBy('sort')
+            ->get();
 
-    public function show(int $id)
-    {
-        return SocialProject::findOrFail($id);
+        return SocialProjectResource::collection($socialProjects);
     }
 }

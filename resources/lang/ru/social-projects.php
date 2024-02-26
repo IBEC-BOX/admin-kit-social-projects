@@ -2,11 +2,13 @@
 
 return [
     'resource' => [
-        'label' => 'SocialProject',
-        'plural_label' => 'SocialProjects',
+        'label' => 'Социальные проекты',
+        'plural_label' => 'Социальные проекты',
 
         'id' => 'ID',
-        'title' => 'Title',
+        'title' => 'Заголовок',
+        'subtitle' => 'Подзаголовок',
+        'image' => 'Изображение',
 
         'created_at' => 'Создан',
         'updated_at' => 'Обновлен',

@@ -20,9 +20,15 @@ class SocialProjectResource extends Resource
         return $form
             ->schema([
                 TranslatableTabs::make(fn ($locale) => Forms\Components\Tabs\Tab::make($locale)->schema([
-                    Forms\Components\TextInput::make('title')
+                    Forms\Components\SpatieMediaLibraryFileUpload::make('image.'.$locale)
+                        ->collection('image.'.$locale)
+                        ->label(__('admin-kit-social-projects::social-projects.resource.image'))
+                        ->required(),
+                    Forms\Components\TextInput::make('title.'.$locale)
                         ->label(__('admin-kit-social-projects::social-projects.resource.title'))
-                        ->required($locale === app()->getLocale()),
+                        ->required(),
+                    Forms\Components\TextInput::make('subtitle.'.$locale)
+                        ->label(__('admin-kit-social-projects::social-projects.resource.subtitle')),
                 ])),
             ])
             ->columns(1);
@@ -33,8 +39,7 @@ class SocialProjectResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label(__('admin-kit-social-projects::social-projects.resource.id'))
-                    ->sortable(),
+                    ->label(__('admin-kit-social-projects::social-projects.resource.id')),
                 Tables\Columns\TextColumn::make('title')
                     ->label(__('admin-kit-social-projects::social-projects.resource.title')),
                 Tables\Columns\TextColumn::make('created_at')
@@ -51,7 +56,8 @@ class SocialProjectResource extends Resource
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ])
-            ->defaultSort('id', 'desc');
+            ->reorderable('sort')
+            ->defaultSort('sort');
     }
 
     public static function getRelations(): array
@@ -76,11 +82,6 @@ class SocialProjectResource extends Resource
     }
 
     public static function getPluralLabel(): ?string
-    {
-        return __('admin-kit-social-projects::social-projects.resource.plural_label');
-    }
-
-    public static function getNavigationGroup(): ?string
     {
         return __('admin-kit-social-projects::social-projects.resource.plural_label');
     }

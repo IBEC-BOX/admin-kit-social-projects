@@ -7,6 +7,8 @@ return [
 
         'id' => 'ID',
         'title' => 'Title',
+        'subtitle' => 'Subtitle',
+        'image' => 'Image',
 
         'created_at' => 'Created At',
         'updated_at' => 'Updated At',
