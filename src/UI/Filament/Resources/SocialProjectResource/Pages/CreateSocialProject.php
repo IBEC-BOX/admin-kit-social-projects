@@ -2,8 +2,8 @@
 
 namespace AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource\Pages;
 
-use Filament\Resources\Pages\CreateRecord;
 use AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource;
+use Filament\Resources\Pages\CreateRecord;
 
 class CreateSocialProject extends CreateRecord
 {
