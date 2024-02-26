@@ -3,11 +3,11 @@
 namespace AdminKit\SocialProjects\UI\Filament\Resources;
 
 use AdminKit\Core\Forms\Components\TranslatableTabs;
+use AdminKit\SocialProjects\Models\SocialProject;
+use AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource\Pages;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use AdminKit\SocialProjects\Models\SocialProject;
-use AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource\Pages;
 
 class SocialProjectResource extends Resource
 {

@@ -2,10 +2,10 @@
 
 namespace AdminKit\SocialProjects;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use AdminKit\SocialProjects\Commands\SocialProjectsCommand;
 use AdminKit\SocialProjects\Providers\RouteServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class SocialProjectsServiceProvider extends PackageServiceProvider
 {

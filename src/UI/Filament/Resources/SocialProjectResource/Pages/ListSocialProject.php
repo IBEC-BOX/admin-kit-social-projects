@@ -2,9 +2,9 @@
 
 namespace AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource\Pages;
 
+use AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
-use AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource;
 
 class ListSocialProject extends ListRecords
 {

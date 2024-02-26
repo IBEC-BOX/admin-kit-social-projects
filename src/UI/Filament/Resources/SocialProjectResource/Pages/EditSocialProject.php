@@ -2,9 +2,9 @@
 
 namespace AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource\Pages;
 
+use AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
-use AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource;
 
 class EditSocialProject extends EditRecord
 {

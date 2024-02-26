@@ -2,8 +2,8 @@
 
 namespace AdminKit\SocialProjects\Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use AdminKit\SocialProjects\Models\SocialProject;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class SocialProjectFactory extends Factory
 {
