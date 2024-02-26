@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use VendorName\Skeleton\UI\API\Controllers\SingleNameController;
+use AdminKit\SocialProjects\UI\API\Controllers\SocialProjectController;
 
-Route::get('/skeleton_without_prefix', [SingleNameController::class, 'index']);
-Route::get('/skeleton_without_prefix/{id}', [SingleNameController::class, 'show']);
+Route::get('/social-projects', [SocialProjectController::class, 'index']);
+Route::get('/social-projects/{id}', [SocialProjectController::class, 'show']);

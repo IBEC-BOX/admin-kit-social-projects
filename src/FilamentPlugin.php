@@ -1,22 +1,22 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace AdminKit\SocialProjects;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use VendorName\Skeleton\UI\Filament\Resources\SingleNameResource;
+use AdminKit\SocialProjects\UI\Filament\Resources\SocialProjectResource;
 
 class FilamentPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'filament-plugin-:package_slug';
+        return 'filament-plugin-admin-kit-social-projects';
     }
 
     public function register(Panel $panel): void
     {
         $panel->resources([
-            SingleNameResource::class,
+            SocialProjectResource::class,
         ]);
     }
 
