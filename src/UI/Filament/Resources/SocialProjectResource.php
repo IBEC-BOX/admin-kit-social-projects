@@ -27,8 +27,10 @@ class SocialProjectResource extends Resource
                     Forms\Components\TextInput::make('title.'.$locale)
                         ->label(__('admin-kit-social-projects::social-projects.resource.title'))
                         ->required(),
-                    Forms\Components\TextInput::make('subtitle.'.$locale)
-                        ->label(__('admin-kit-social-projects::social-projects.resource.subtitle')),
+                    Forms\Components\Textarea::make('subtitle.'.$locale)
+                        ->label(__('admin-kit-social-projects::social-projects.resource.subtitle'))
+                        ->rows(5)
+                        ->maxLength(254),
                 ])),
             ])
             ->columns(1);
