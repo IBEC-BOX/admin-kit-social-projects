@@ -23,7 +23,10 @@ class SocialProjectResource extends Resource
                     Forms\Components\SpatieMediaLibraryFileUpload::make('image.'.$locale)
                         ->collection('image.'.$locale)
                         ->label(__('admin-kit-social-projects::social-projects.resource.image'))
-                        ->required(),
+                        ->required()
+                        ->image()
+                        ->optimize('webp')
+                        ->resize(30),
                     Forms\Components\TextInput::make('title.'.$locale)
                         ->label(__('admin-kit-social-projects::social-projects.resource.title'))
                         ->required(),
