@@ -33,6 +33,6 @@ class SocialProject extends AbstractModel implements HasMedia
 
     protected static function newFactory(): SocialProjectFactory
     {
-        return new SocialProjectFactory();
+        return new SocialProjectFactory;
     }
 }

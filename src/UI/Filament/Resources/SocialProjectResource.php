@@ -33,7 +33,7 @@ class SocialProjectResource extends Resource
                     Forms\Components\Textarea::make('subtitle.'.$locale)
                         ->label(__('admin-kit-social-projects::social-projects.resource.subtitle'))
                         ->rows(5)
-                        ->maxLength(254),
+                        ->maxLength(1000),
                 ])),
             ])
             ->columns(1);
