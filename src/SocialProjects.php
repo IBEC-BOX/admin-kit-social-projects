@@ -2,6 +2,4 @@
 
 namespace AdminKit\SocialProjects;
 
-class SocialProjects
-{
-}
+class SocialProjects {}
